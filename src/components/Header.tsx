@@ -1,21 +1,28 @@
-// components/Header.tsx
-'use client';
+import React from 'react';
+import styles from '@/styles/header.module.css';
 
 interface HeaderProps {
-    setActiveTab: (tab: 'movies' | 'genres') => void;
+    activeTab: 'movies' | 'genres';
+    onTabChange: (tab: 'movies' | 'genres') => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ setActiveTab }) => {
+const Header: React.FC<HeaderProps> = ({ activeTab, onTabChange }) => {
     return (
-        <header>
-            <nav>
-                <button onClick={() => setActiveTab('movies')}>Movies</button>
-                <button onClick={() => setActiveTab('genres')}>Genres</button>
-            </nav>
-        </header>
+        <div className={styles.header}>
+            <button
+                className={`${styles.tabButton} ${activeTab === 'movies' ? styles.active : ''}`}
+                onClick={() => onTabChange('movies')}
+            >
+                Movies
+            </button>
+            <button
+                className={`${styles.tabButton} ${activeTab === 'genres' ? styles.active : ''}`}
+                onClick={() => onTabChange('genres')}
+            >
+                Genres
+            </button>
+        </div>
     );
 };
 
 export default Header;
-
-

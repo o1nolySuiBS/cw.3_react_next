@@ -1,0 +1,26 @@
+/* GenreList.module.css */
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c; /* Темний фон для контейнера */
+    color: #e0e0e0; /* Світлий текст */
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Світлий заголовок */
+}
+
+.genreItem {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #444; /* Світла лінія розмежування */
+    margin-bottom: 0.5rem;
+}
+
+.genreItem:hover {
+    background-color: #333; /* Темніший фон при наведенні */
+}

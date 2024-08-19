@@ -1,9 +1,9 @@
-// components/GenreList.tsx
 'use client';
 
 import React, { useEffect, useState } from 'react';
 import { GenreService } from '@/service/genre.api.service';
 import { IGenre } from '@/model/IGenreModel';
+import styles from '@/styles/GenreList.module.css'; // Стилі для GenreList
 
 const GenreList: React.FC = () => {
     const [genres, setGenres] = useState<IGenre[]>([]);
@@ -22,11 +22,13 @@ const GenreList: React.FC = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Genres</h1>
-            <ul>
+        <div className={styles.container}>
+            <h1 className={styles.heading}>Genres</h1>
+            <ul className={styles.genreList}>
                 {genres.map((genre) => (
-                    <li key={genre.id}>{genre.name}</li>
+                    <li key={genre.id} className={styles.genreItem}>
+                        {genre.name}
+                    </li>
                 ))}
             </ul>
         </div>

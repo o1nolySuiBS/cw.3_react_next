@@ -1,26 +1,20 @@
 'use client';
-import GenreList from '@/components/GenreList';
+
+import React, { useState } from 'react';
+import Header from '@/components/Header';
 import MovieList from '@/components/MovieList';
-
-import { useState } from 'react';
-
+import GenreList from '@/components/GenreList';
 
 const HomePage: React.FC = () => {
     const [activeTab, setActiveTab] = useState<'movies' | 'genres'>('movies');
 
     return (
         <div>
-            <header>
-                <button onClick={() => setActiveTab('movies')}>Movies</button>
-                <button onClick={() => setActiveTab('genres')}>Genres</button>
-            </header>
-            <main>
-                {activeTab === 'movies' && <MovieList />}
-                {activeTab === 'genres' && <GenreList />}
-            </main>
+            <Header activeTab={activeTab} onTabChange={setActiveTab} />
+            {activeTab === 'movies' && <MovieList />}
+            {activeTab === 'genres' && <GenreList />}
         </div>
     );
 };
 
 export default HomePage;
-
