@@ -1,7 +1,7 @@
 'use client';
+import GenreList from '@/components/GenreList';
+import MovieList from '@/components/MovieList';
 
-import MovieList from '@/components/MovieList';
-import MovieList from '@/components/MovieList';
 import { useState } from 'react';
 
 

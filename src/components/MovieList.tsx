@@ -4,6 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import { MovieService } from '@/service/movie.api.service';
 import { IMovieModel } from '@/model/IMovieModel';
+import Link from 'next/link';
 
 const MovieList: React.FC = () => {
     const [movies, setMovies] = useState<IMovieModel | null>(null);
@@ -31,7 +32,7 @@ const MovieList: React.FC = () => {
                         alt={movie.title}
                     />
                     <div>
-                        <h2>{movie.title}</h2>
+                        <Link href={`/movie/${movie.id}`}>{movie.title}</Link>
                         <p>{movie.release_date}</p>
                     </div>
                 </div>

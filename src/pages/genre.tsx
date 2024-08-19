@@ -1,16 +1,14 @@
 // src/pages/genres.tsx
-import { NextPage } from 'next';
-import Header from '@/components/Header';
+import {NextPage} from 'next';
 import GenreList from '@/components/GenreList';
 
 const GenresPage: NextPage = () => {
     return (
-        <>
-            <Header />
-            <main style={{ padding: '2rem' }}>
-                <GenreList />
-            </main>
-        </>
+        <div>
+
+            <GenreList/>
+
+        </div>
     );
 };
 
