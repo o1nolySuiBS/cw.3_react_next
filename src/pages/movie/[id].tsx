@@ -6,7 +6,7 @@ import { MovieService } from '@/service/movie.api.service';
 import { IMovie } from '@/model/IMovieModel';
 import styles from '@/styles/MovieDetails.module.css';
 import Link from 'next/link';
-import Header from '@/components/Header';
+
 
 const MovieDetails: React.FC = () => {
     const router = useRouter();

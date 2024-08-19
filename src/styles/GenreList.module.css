@@ -11,8 +11,9 @@
 
 .heading {
     font-size: 2rem;
-    margin-bottom: 1rem;
     color: #ffffff; /* Світлий заголовок */
+    margin-bottom: 10px;
+    margin-top: -5px;
 }
 
 .genreItem {
@@ -24,3 +25,15 @@
 .genreItem:hover {
     background-color: #333; /* Темніший фон при наведенні */
 }
+
+.Link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.1s ease;
+}
+
+.Link:hover {
+    color: #8f8e8e;
+}
+

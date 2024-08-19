@@ -34,13 +34,13 @@
 
 .title {
     font-size: 1.5rem;
-    color: #0070f3; /* Колір тексту посилання */
+    color: #ffffff;
     text-decoration: none; /* Видалити підкреслення */
     transition: color 0.3s; /* Плавна зміна кольору при наведенні */
 }
 
 .title:hover {
-    color: #00aaff; /* Легкий відтінок синього при наведенні */
+    color: #8f8e8e;
 }
 
 .releaseDate {

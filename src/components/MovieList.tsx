@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import {MovieService} from '@/service/movie.api.service';
 import {IMovieModel} from '@/model/IMovieModel';
 import Link from 'next/link';
-import styles from '@/styles/MovieList.module.css'; // Оновлений шлях до стилів
+import styles from '@/styles/MovieList.module.css';
 
 const MovieList: React.FC = () => {
     const [movies, setMovies] = useState<IMovieModel | null>(null);
