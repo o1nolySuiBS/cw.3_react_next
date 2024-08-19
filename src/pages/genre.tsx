@@ -6,7 +6,7 @@ import Header from '@/components/Header';
 const GenresPage: NextPage = () => {
     return (
         <div>
-            <Header/>
+
             <GenreList/>
 
         </div>

@@ -1,15 +1,16 @@
 'use client';
 
-import React, {useState, useCallback} from 'react';
+import React, { useState } from 'react';
 import styles from '@/styles/header.module.css';
-import {MovieService} from '@/service/movie.api.service';
+import { MovieService } from '@/service/movie.api.service';
+import ThemeToggle from './ThemeToggle';
 
 interface HeaderProps {
     activeTab: 'movies' | 'genres';
     onTabChange: (tab: 'movies' | 'genres') => void;
 }
 
-const Header: React.FC<HeaderProps> = ({activeTab, onTabChange}) => {
+const Header: React.FC<HeaderProps> = ({ activeTab, onTabChange }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState<any[]>([]);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -23,11 +24,13 @@ const Header: React.FC<HeaderProps> = ({activeTab, onTabChange}) => {
             try {
                 const results = await MovieService.searchMovies(query, 1);
                 setSearchResults(results.results);
+                setIsDropdownOpen(true); // Відкриваємо меню після отримання результатів
             } catch (error) {
                 console.error('Failed to search movies', error);
             }
         } else {
             setSearchResults([]);
+            setIsDropdownOpen(false); // Закриваємо меню, якщо пошуковий запит порожній
         }
     };
 
@@ -37,8 +40,12 @@ const Header: React.FC<HeaderProps> = ({activeTab, onTabChange}) => {
         handleSearch(query);
     };
 
-    const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
+    const handleDropdownClick = (movieId: number) => {
+        setSearchQuery('');
+        setSearchResults([]);
+        setIsDropdownOpen(false);
+        // Перехід на сторінку фільму
+        window.location.href = `/movie/${movieId}`;
     };
 
     return (
@@ -63,15 +70,14 @@ const Header: React.FC<HeaderProps> = ({activeTab, onTabChange}) => {
                     placeholder="Search for movies..."
                     value={searchQuery}
                     onChange={handleInputChange}
-                    className={styles.searchInput}/>
-                {searchQuery && (
-                    <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.show : ''}`}>
+                    className={styles.searchInput}
+                />
+                {searchQuery && isDropdownOpen && (
+                    <div className={styles.dropdownMenu}>
                         {searchResults.length > 0 ? (
                             searchResults.map((movie) => (
-                                <div key={movie.id} className={styles.dropdownItem}>
-                                    <a href={`/movie/${movie.id}`} className={styles.dropdownLink}>
-                                        {movie.title}
-                                    </a>
+                                <div key={movie.id} className={styles.dropdownItem} onClick={() => handleDropdownClick(movie.id)}>
+                                    <a className={styles.dropdownLink}>{movie.title}</a>
                                 </div>
                             ))
                         ) : (
@@ -80,9 +86,13 @@ const Header: React.FC<HeaderProps> = ({activeTab, onTabChange}) => {
                     </div>
                 )}
             </div>
+            <ThemeToggle />
         </header>
     );
 };
 
 export default Header;
-// зірочки я вкрав в когось на гітхабі, як і інпут з стилями, а перевірки дієздатності писав чатгпт :(
+
+//інпут я вкрав, стилі робив гпт перевірки дієздатності теж писав чатгпт, коментарі
+// теж його коли кидав код на оптимізацію
+// бо довго грузив вкладки, не знав з чим це було пов'язано :(
