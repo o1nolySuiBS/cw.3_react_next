@@ -54,18 +54,18 @@ const MovieService = {
     },
 
     // Пошук фільмів за жанром
-    searchMoviesByGenre: async (genreName: string): Promise<IMovieModel> => {
+    getMoviesByGenreId: async (genreId: string, page: number = 1): Promise<IMovieModel> => {
         try {
-            const response = await fetch(`${baseURL}${urls.search}?with_genres=${genreName}`, options);
+            const response = await fetch(`${baseURL}${urls.movies}?with_genres=${genreId}&page=${page}`, options);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             return await response.json();
         } catch (error) {
-            console.error('Error searching movies by genre:', error);
-            throw new Error('Failed to search movies by genre');
+            console.error('Error fetching movies by genre:', error);
+            throw new Error('Failed to fetch movies by genre');
         }
-    }
+    },
 };
 
 export { MovieService };
