@@ -1,6 +1,6 @@
-import {token} from '@/constant/token';
-import {baseURL, urls} from '@/constant/urls';
-import {IMovie, IMovieModel} from '@/model/IMovieModel';
+import { token } from '@/constant/token';
+import { baseURL, urls } from '@/constant/urls';
+import { IMovie, IMovieModel } from '@/model/IMovieModel';
 
 const options: RequestInit = {
     method: 'GET',
@@ -48,20 +48,7 @@ const MovieService = {
             console.error('Error searching movies:', error);
             throw new Error('Failed to search movies');
         }
-    },
-    getByGenre: async (query: string, page:number): Promise<IMovieModel> =>{
-        try {
-            const response = await fetch(`${baseURL}${urls.genres}?query=${query}&page=${page}`, options);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return await response.json();
-            } catch (error) {
-            console.error('Error searching movies:', error);
-            throw new Error('Failed to search movies');
-            }
-        }
-
+    }
 };
 
-export {MovieService};
+export { MovieService };

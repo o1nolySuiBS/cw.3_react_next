@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { MovieService } from '@/service/movie.api.service';
-import { IMovieModel } from '@/model/IMovieModel';
+import React, {useEffect, useState} from 'react';
+import {MovieService} from '@/service/movie.api.service';
+import {IMovieModel} from '@/model/IMovieModel';
 import Link from 'next/link';
 import styles from '@/styles/MovieList.module.css'; // Оновлений шлях до стилів
 
