@@ -11,7 +11,6 @@ const options: RequestInit = {
 };
 
 const MovieService = {
-    // Отримання списку всіх фільмів із пагінацією
     getAll: async (page: number): Promise<IMovieModel> => {
         try {
             const response = await fetch(`${baseURL}${urls.movies}?page=${page}`, options);
@@ -25,7 +24,6 @@ const MovieService = {
         }
     },
 
-    // Отримання фільму за його ID
     getById: async (id: number): Promise<IMovie> => {
         try {
             const response = await fetch(`${baseURL}${urls.movieDetails(id)}`, options);
@@ -39,7 +37,6 @@ const MovieService = {
         }
     },
 
-    // Пошук фільмів за текстовим запитом
     searchMovies: async (query: string, page: number): Promise<IMovieModel> => {
         try {
             const response = await fetch(`${baseURL}${urls.search}?query=${query}&page=${page}`, options);
@@ -53,7 +50,6 @@ const MovieService = {
         }
     },
 
-    // Пошук фільмів за жанром
     getMoviesByGenreId: async (genreId: string, page: number = 1): Promise<IMovieModel> => {
         try {
             const response = await fetch(`${baseURL}${urls.movies}?with_genres=${genreId}&page=${page}`, options);

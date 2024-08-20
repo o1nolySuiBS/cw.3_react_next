@@ -24,13 +24,13 @@ const Header: React.FC<HeaderProps> = ({ activeTab, onTabChange }) => {
             try {
                 const results = await MovieService.searchMovies(query, 1);
                 setSearchResults(results.results);
-                setIsDropdownOpen(true); // Відкриваємо меню після отримання результатів
+                setIsDropdownOpen(true);
             } catch (error) {
                 console.error('Failed to search movies', error);
             }
         } else {
             setSearchResults([]);
-            setIsDropdownOpen(false); // Закриваємо меню, якщо пошуковий запит порожній
+            setIsDropdownOpen(false);
         }
     };
 
@@ -93,6 +93,3 @@ const Header: React.FC<HeaderProps> = ({ activeTab, onTabChange }) => {
 
 export default Header;
 
-//інпут я вкрав, стилі робив гпт перевірки дієздатності теж писав чатгпт, коментарі
-// теж його коли кидав код на оптимізацію
-// бо довго грузив вкладки, не знав з чим це було пов'язано :(

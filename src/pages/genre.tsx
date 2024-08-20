@@ -1,4 +1,3 @@
-// src/pages/genres.tsx
 import {NextPage} from 'next';
 import GenreList from '@/components/GenreList';
 import Header from '@/components/Header';
