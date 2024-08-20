@@ -107,3 +107,4 @@ const GenreMoviesPage: React.FC = () => {
 
 export default GenreMoviesPage;
 
+

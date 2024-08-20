@@ -66,3 +66,14 @@
 .star:hover {
     color: #ffb94b;
 }
+.genreLink {
+    text-decoration: none;
+    color: #cecece;
+    font-weight: bold;
+    transition: color 0.1s ease;
+    margin-left: 15px;
+}
+
+.genreLink:hover {
+    color: #8f8e8e;
+}

@@ -7,7 +7,6 @@ import { IMovie } from '@/model/IMovieModel';
 import styles from '@/styles/MovieDetails.module.css';
 import Link from 'next/link';
 
-
 const MovieDetails: React.FC = () => {
     const router = useRouter();
     const { id } = router.query;
@@ -54,10 +53,9 @@ const MovieDetails: React.FC = () => {
             </div>
         );
     };
-/*Знаю, що зірочки кака, але я інших чомусь приєднати не зміг :( */
+
     return (
         <div className={styles.container}>
-
             <Link href="/" className={styles.backButton}>
                 Back to Movies
             </Link>
@@ -72,6 +70,14 @@ const MovieDetails: React.FC = () => {
             <div className={styles.rating}>
                 <strong>Rating:</strong> {renderRatingStars(movie.vote_average)}
             </div>
+            <p className={styles.genres}>
+                <strong>Genres:</strong>
+                {movie.genres.map(genre => (
+                    <Link key={genre.id} className={styles.genreLink} href={`/genre/${genre.id}`}>
+                        {genre.name}
+                    </Link>
+                ))}
+            </p>
         </div>
     );
 };

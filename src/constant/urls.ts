@@ -1,8 +1,8 @@
-// src/constant/urls.ts
+
 const baseURL = 'https://api.themoviedb.org/3';
 
 const urls = {
-    movies: '/movie/popular',
+    movies: '/discover/movie',
     movieDetails: (id: number) => `/movie/${id}`,
     search: '/search/movie',
     genres: '/genre/movie/list',

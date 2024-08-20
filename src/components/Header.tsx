@@ -44,7 +44,6 @@ const Header: React.FC<HeaderProps> = ({ activeTab, onTabChange }) => {
         setSearchQuery('');
         setSearchResults([]);
         setIsDropdownOpen(false);
-        // Перехід на сторінку фільму
         window.location.href = `/movie/${movieId}`;
     };
 

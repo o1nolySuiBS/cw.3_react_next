@@ -1,4 +1,4 @@
-import './globals.css'; // Глобальні стилі
+import './globals.css';
 
 import { ReactNode } from 'react';
 
