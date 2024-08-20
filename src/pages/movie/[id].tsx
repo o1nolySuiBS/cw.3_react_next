@@ -11,6 +11,7 @@ const MovieDetails: React.FC = () => {
     const router = useRouter();
     const { id } = router.query;
     const [movie, setMovie] = useState<IMovie | null>(null);
+    const [userRating, setUserRating] = useState<number | null>(null);
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
@@ -18,6 +19,13 @@ const MovieDetails: React.FC = () => {
                 try {
                     const movieData = await MovieService.getById(parseInt(id as string));
                     setMovie(movieData);
+
+                    const savedRating = localStorage.getItem(`movie-${id}-rating`);
+                    if (savedRating) {
+                        setUserRating(Number(savedRating));
+                    } else {
+                        setUserRating(movieData.vote_average);
+                    }
                 } catch (error) {
                     console.error('Failed to fetch movie details', error);
                 }
@@ -27,32 +35,41 @@ const MovieDetails: React.FC = () => {
         fetchMovieDetails();
     }, [id]);
 
-    if (!movie) return <div>Loading...</div>;
-
-    const handleStarClick = () => {
-        router.push(`https://youtu.be/MVbNHCstkqY?si=KISG7wD--qVhLQ8J`);
+    const handleStarClick = (rating: number) => {
+        setUserRating(rating);
+        localStorage.setItem(`movie-${id}-rating`, rating.toString());
     };
 
     const renderRatingStars = (rating: number) => {
         const totalStars = 10;
-        const filledStars = Math.round(rating / 1);
+        const filledStars = Math.round(rating);
         const emptyStars = totalStars - filledStars;
 
         return (
             <div className={styles.ratingStars}>
                 {'★'.repeat(filledStars).split('').map((star, index) => (
-                    <span key={`filled-${index}`} className={styles.star} onClick={handleStarClick}>
+                    <span
+                        key={`filled-${index}`}
+                        className={`${styles.star} ${styles.filled}`}
+                        onClick={() => handleStarClick(index + 1)}
+                    >
                         {star}
                     </span>
                 ))}
                 {'☆'.repeat(emptyStars).split('').map((star, index) => (
-                    <span key={`empty-${index}`} className={styles.star} onClick={handleStarClick}>
+                    <span
+                        key={`empty-${index}`}
+                        className={styles.star}
+                        onClick={() => handleStarClick(filledStars + index + 1)}
+                    >
                         {star}
                     </span>
                 ))}
             </div>
         );
     };
+
+    if (!movie) return <div>Loading...</div>;
 
     return (
         <div className={styles.container}>
@@ -68,7 +85,7 @@ const MovieDetails: React.FC = () => {
             <p className={styles.releaseDate}><strong>Release Date:</strong> {movie.release_date}</p>
             <p className={styles.overview}><strong>Overview:</strong> {movie.overview}</p>
             <div className={styles.rating}>
-                <strong>Rating:</strong> {renderRatingStars(movie.vote_average)}
+                <strong>Rating:</strong> {renderRatingStars(userRating ?? movie.vote_average)}
             </div>
             <p className={styles.genres}>
                 <strong>Genres:</strong>
