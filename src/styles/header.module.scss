@@ -24,7 +24,8 @@
     cursor: pointer;
     font-size: 16px;
     color: #fff; /* Світлий текст */
-
+    margin-left: 6px;
+    border-radius: 4px;
 }
 
 .tabButton:hover {
@@ -36,21 +37,20 @@
     border-bottom: 2px solid #0070f3; /* Яскравий акцент */
 }
 
-/* Стилі для пошукового поля */
 .searchWrapper {
     position: relative;
     flex-grow: 1;
 }
 
 .searchInput {
-    width: 99%;
-    padding: 8px;
+    width: 50%;
+    padding: 10px;
     border: 1px solid #555; /* Темніша рамка */
     border-radius: 4px;
     font-size: 16px;
     color: #fff; /* Світлий текст */
     background-color: #444; /* Темний фон */
-    margin-left: 10px;
+    margin-left: 6px;
 }
 
 .dropdownMenu {

@@ -82,10 +82,13 @@
     display: inline-block;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
-    color: #0070f3;
+    font-size: 1rem;
+    color: #e0e0e0;
     text-decoration: none;
-    border: 1px solid #0070f3;
-    border-radius: 5px;
-    background-color: #121212;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #333;
     transition: background-color 0.3s, color 0.3s;
+    margin-left: 50vw;
+
 }

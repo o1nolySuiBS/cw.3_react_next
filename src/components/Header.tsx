@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from '@/styles/header.module.css';
+import styles from '@/styles/header.module.scss';
 import { MovieService } from '@/service/movie.api.service';
 import ThemeToggle from './ThemeToggle';
+import UserComponent from './UserComponent';
 
 interface HeaderProps {
     activeTab: 'movies' | 'genres';
@@ -86,6 +87,7 @@ const Header: React.FC<HeaderProps> = ({ activeTab, onTabChange }) => {
                 )}
             </div>
             <ThemeToggle />
+            <UserComponent/>
         </header>
     );
 };

@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { MovieService } from '@/service/movie.api.service';
 import { IMovie } from '@/model/IMovieModel';
-import styles from '@/styles/MovieDetails.module.css';
+import styles from '@/styles/MovieDetails.module.scss';
 import Link from 'next/link';
 
 const MovieDetails: React.FC = () => {
@@ -73,9 +73,7 @@ const MovieDetails: React.FC = () => {
 
     return (
         <div className={styles.container}>
-            <Link href="/" className={styles.backButton}>
-                Back to Movies
-            </Link>
+
             <h1 className={styles.title}>{movie.title}</h1>
             <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -94,7 +92,11 @@ const MovieDetails: React.FC = () => {
                         {genre.name}
                     </Link>
                 ))}
+
             </p>
+            <Link href="/" className={styles.backButton}>
+                Back to Movies
+            </Link>
         </div>
     );
 };

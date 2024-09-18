@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { GenreService } from '@/service/genre.api.service';
 import Link from 'next/link';
-import styles from '@/styles/MovieList.module.css';
+import styles from '@/styles/MovieList.module.scss';
 import { useRouter } from 'next/router';
 
 interface Movie {
@@ -57,11 +57,12 @@ const GenreMoviesPage: React.FC = () => {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.heading}>Movies by Genre</h1>
-            <Link href="/" className={styles.backButton}>
+
+            <h1 className={styles.heading}>Movies by Genre
+                <Link href="/" className={styles.backButton}>
                 Back to Movies
             </Link>
-
+            </h1>
             {movies.results.length > 0 ? (
                 movies.results.map((movie) => (
                     <div key={movie.id} className={styles.movieItem}>

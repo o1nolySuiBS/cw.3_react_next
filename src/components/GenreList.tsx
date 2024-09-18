@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { GenreService } from '@/service/genre.api.service';
 import { IGenre } from '@/model/IGenreModel';
-import styles from '@/styles/GenreList.module.css';
+import styles from '@/styles/GenreList.module.scss';
 import Link from 'next/link';
 
 const GenreList: React.FC = () => {

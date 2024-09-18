@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d3308f1b-9bc2-4018-8e91-227a29bbcea0" name="Changes" comment="+ зірки для оцінки адекватні">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieList.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2kobIorrEpQR7M1k4ZWuu3wyqmV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jsx.switch.disabled": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor.code.editing",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="cw.3_react_next" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="cw.3_react_next" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3308f1b-9bc2-4018-8e91-227a29bbcea0" name="Changes" comment="" />
+      <created>1723952801767</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723952801767</updated>
+      <workItem from="1723952802595" duration="240000" />
+      <workItem from="1723953360230" duration="17684000" />
+      <workItem from="1724032484552" duration="10071000" />
+      <workItem from="1724042774012" duration="1136000" />
+      <workItem from="1724043936899" duration="8488000" />
+      <workItem from="1724052601073" duration="1690000" />
+      <workItem from="1724054406423" duration="9000" />
+      <workItem from="1724054430810" duration="940000" />
+      <workItem from="1724055394854" duration="863000" />
+      <workItem from="1724056279943" duration="117000" />
+      <workItem from="1724056480663" duration="2974000" />
+      <workItem from="1724139755033" duration="10000" />
+      <workItem from="1724150106816" duration="4338000" />
+      <workItem from="1724203382753" duration="112000" />
+      <workItem from="1724580233842" duration="23000" />
+      <workItem from="1724601109644" duration="10000" />
+      <workItem from="1724613079103" duration="694000" />
+      <workItem from="1724678093655" duration="650000" />
+      <workItem from="1724689659271" duration="10000" />
+      <workItem from="1725571869081" duration="1499000" />
+      <workItem from="1725776586122" duration="41000" />
+      <workItem from="1725776663799" duration="1000" />
+      <workItem from="1725776678887" duration="2000" />
+      <workItem from="1726076166052" duration="605000" />
+      <workItem from="1726185252619" duration="3000" />
+      <workItem from="1726581009635" duration="25000" />
+      <workItem from="1726581042049" duration="200000" />
+      <workItem from="1726581285939" duration="4130000" />
+    </task>
+    <task id="LOCAL-00001" summary="start">
+      <option name="closed" value="true" />
+      <created>1723954028173</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723954028173</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ver 1.2">
+      <option name="closed" value="true" />
+      <created>1724029288777</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724029288777</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ver 1.3">
+      <option name="closed" value="true" />
+      <created>1724037479908</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724037479908</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ver 1.4">
+      <option name="closed" value="true" />
+      <created>1724044033847</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724044033847</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ver 1.4">
+      <option name="closed" value="true" />
+      <created>1724044048232</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724044048232</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ver 1.5">
+      <option name="closed" value="true" />
+      <created>1724045788387</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724045788387</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ver 2">
+      <option name="closed" value="true" />
+      <created>1724049541978</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724049541978</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ver 2.2">
+      <option name="closed" value="true" />
+      <created>1724051110016</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724051110016</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ver 3.0">
+      <option name="closed" value="true" />
+      <created>1724056391693</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724056391693</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Забув докомітити файл з сервісом :)">
+      <option name="closed" value="true" />
+      <created>1724151742445</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724151742445</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Виправив баг з жанрами(там показувало всі фільми, не залежно від того, на який жанр тикаєш + добавив жанри на сторінку фільму якого вибрали)">
+      <option name="closed" value="true" />
+      <created>1724152787409</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1724152787409</updated>
+    </task>
+    <task id="LOCAL-00012" summary="+ зірки для оцінки адекватні">
+      <option name="closed" value="true" />
+      <created>1724153472757</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1724153472757</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="start" />
+    <MESSAGE value="ver 1.2" />
+    <MESSAGE value="ver 1.3" />
+    <MESSAGE value="ver 1.4" />
+    <MESSAGE value="ver 1.5" />
+    <MESSAGE value="ver 2" />
+    <MESSAGE value="ver 2.2" />
+    <MESSAGE value="ver 3.0" />
+    <MESSAGE value="Забув докомітити файл з сервісом :)" />
+    <MESSAGE value="Виправив баг з жанрами(там показувало всі фільми, не залежно від того, на який жанр тикаєш + добавив жанри на сторінку фільму якого вибрали)" />
+    <MESSAGE value="+ зірки для оцінки адекватні" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ зірки для оцінки адекватні" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

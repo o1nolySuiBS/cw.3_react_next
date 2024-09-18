@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import {MovieService} from '@/service/movie.api.service';
 import {IMovieModel} from '@/model/IMovieModel';
 import Link from 'next/link';
-import styles from '@/styles/MovieList.module.css';
+import styles from '@/styles/MovieList.module.scss';
 
 const MovieList: React.FC = () => {
     const [movies, setMovies] = useState<IMovieModel | null>(null);
@@ -16,7 +16,9 @@ const MovieList: React.FC = () => {
             try {
                 const movieData = await MovieService.getAll(currentPage);
                 setMovies(movieData);
-                setTotalPages(movieData.total_pages);
+
+                const limitedPages = Math.min(movieData.total_pages, 30);
+                setTotalPages(limitedPages);
             } catch (error) {
                 console.error('Failed to fetch movies', error);
             }
